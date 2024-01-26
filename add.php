@@ -1,7 +1,7 @@
 <?php
 $con = mysqli_init();
 mysqli_ssl_set($con,NULL,NULL, "{path to CA cert}", NULL, NULL);
-mysqli_real_connect($conn, "shopappp-server.mysql.database.azure.com", "thlmplvgcj", "{your_password}", "{your_database}", 3306, MYSQLI_CLIENT_SSL);
+mysqli_real_connect($conn, "shopappp-server.mysql.database.azure.com", "thlmplvgcj", "root123456789.", "shopappp-database", 3306, MYSQLI_CLIENT_SSL);
   
     // Check connection
     if ($conn->connect_error) {
