@@ -1,7 +1,12 @@
 <?php
-$con = mysqli_init();
-mysqli_real_connect($conn, "shopappp-server.mysql.database.azure.com", "thlmplvgcj", "root123456789.", "shopappp-database", 3306);
-  
+$servername = "shopappp-server.mysql.database.azure.com";
+    $username = "thlmplvgcj";
+    $password = "root123456789.";
+    $dbname = "shopappp-database";
+    
+    // Create connection
+    $con = new mysqli($servername, $username, $password, $dbname);
+    
     // Check connection
     if ($con->connect_error) {
         die("Connection failed: ". $con->connect_error);
