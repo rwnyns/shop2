@@ -1,8 +1,12 @@
 <?php
-  $conn = mysqli_init();
-mysqli_ssl_set($conn,NULL,NULL, NULL, NULL);
-mysqli_real_connect($conn, "shopdb1.mysql.database.azure.com", "rwn", "root123456789.", "shopdb1", 3306);
+$servername = "shopdb1.mysql.database.azure.com";
+    $username = "rwn";
+    $password = "root123456789.";
+    $dbname = "shopdb1";
     
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+   
    
     // Check connection
     if ($conn->connect_error) {
