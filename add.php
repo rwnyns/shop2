@@ -1,33 +1,35 @@
 <?php
-$con = mysqli_init();
-mysqli_ssl_set($con,NULL,NULL,  NULL, NULL);
-mysqli_real_connect($conn, "shopappp-server.mysql.database.azure.com", "thlmplvgcj", "root123456789.", "shopappp-database", 3306);
-
+    /*$servername = "shopdb1.mysql.database.azure.com";
+    $username = "rwn";
+    $password = "123";
+    $dbname = "shopdb1";
+    
     // Create connection
-    $con = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
     
     // Check connection
-    if ($con->connect_error) {
-        die("Connection failed: ". $con->connect_error);
+    if ($conn->connect_error) {
+        die("Connection failed: "
+            . $conn->connect_error);
     }
     
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {*/
     
-        // collect value of input field
-        
-        $productName = $_REQUEST['productName'];
-        $ProductColor = $_REQUEST['productcolor'];
-        $ProductCatID = $_REQUEST['catID'];
-        
-        
-        $sqlquery = "INSERT INTO products (Pname, color, catID) VALUES ('$productName','$ProductColor' , '$ProductCatID' )";
-        
-        if ($con->query($sqlquery) == TRUE) {
-            echo "record inserted successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . $con->error;
-        }  
+    // collect value of input field
+    $Productid = $_REQUEST['producID'];
+    $ProductName = $_REQUEST['productName'];
+    $ProductColor = $_REQUEST['productcolor'];
+    $ProductCatID = $_REQUEST['catID'];
+    echo  $Productid;
+    
+   /*  $sqlquery = "INSERT INTO products VALUES ( $Productid,  $ProductName, $ProductColor,  $ProductCatID )";
+    
+    if ($conn->query($sql) === TRUE) {
+        echo "record inserted successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }  */
 
-   }
+   // }
 
 ?>
