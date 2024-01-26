@@ -1,8 +1,8 @@
 <?php
-$servername = "shopappp-server.mysql.database.azure.com";
-    $username = "thlmplvgcj";
+$servername = "shopdb1.mysql.database.azure.com";
+    $username = "rwn";
     $password = "root123456789.";
-    $dbname = "shopappp-database";
+    $dbname = "shopdb1";
     
     // Create connection
     $con = new mysqli($servername, $username, $password, $dbname);
