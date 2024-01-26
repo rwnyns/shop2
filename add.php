@@ -3,8 +3,8 @@ $con = mysqli_init();
 mysqli_real_connect($conn, "shopappp-server.mysql.database.azure.com", "thlmplvgcj", "root123456789.", "shopappp-database", 3306);
   
     // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: ". $conn->connect_error);
+    if ($con->connect_error) {
+        die("Connection failed: ". $con->connect_error);
     }
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,10 +18,10 @@ mysqli_real_connect($conn, "shopappp-server.mysql.database.azure.com", "thlmplvg
         
         $sqlquery = "INSERT INTO products (Pname, color, catID) VALUES ('$productName','$ProductColor' , '$ProductCatID' )";
         
-        if ($conn->query($sqlquery) == TRUE) {
+        if ($con->query($sqlquery) == TRUE) {
             echo "record inserted successfully";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $sql . "<br>" . $con->error;
         }  
 
    }
