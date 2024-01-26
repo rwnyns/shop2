@@ -1,7 +1,7 @@
 <?php
 $con = mysqli_init();
 mysqli_ssl_set($con,NULL,NULL,  NULL, NULL);
-mysqli_real_connect($conn, "shopdb1.mysql.database.azure.com", "rwn", "root123456789.", "shopdb1", 3306);
+mysqli_real_connect($conn, "shopappp-server.mysql.database.azure.com", "thlmplvgcj", "root123456789.", "shopappp-database", 3306);
 
     // Create connection
     $con = new mysqli($servername, $username, $password, $dbname);
